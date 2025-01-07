@@ -1,0 +1,48 @@
+.custom-panel-header {
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.step-label {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ensure full width */
+}
+
+/* Only apply space-between if there's a toggle icon */
+.step-label.justify-content-between {
+    justify-content: space-between;
+}
+
+.step-number {
+    background-color: green;
+    color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+/* Style for the toggle icon */
+.toggle-icon {
+    font-size: 12px;
+    transition: transform 0.3s;
+    margin-left: auto; /* Push the icon to the far right */
+}
+
+/* Optional: Style for panel content */
+.panel-content {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+}
