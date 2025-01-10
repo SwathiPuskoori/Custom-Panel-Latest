@@ -1,0 +1,185 @@
+/* Apply styles to the visible input inside the custom dropdown */
+.choices__input.form-control {
+  border-radius: 10px !important;
+}
+
+/* Optionally, if you want to target the dropdown container for additional styling */
+.form-control.ui.fluid.selection.dropdown {
+  border-radius: 10px !important;
+  height: calc(2em + 2px + 0.75rem) !important;
+  /* Add any additional styles for the container here */
+}
+
+/* If you want to target the dropdown's list */
+.choices__list {
+  border-radius: 10px !important;
+  /* You can add styles for the list here */
+}
+
+
+body {
+  color: #333;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  word-wrap: break-word;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+input.form-control {
+  border-radius: 10px !important;
+  height: calc(2em + 2px + 0.75rem) !important;
+}
+
+/* Scoped styling for formio-component-file (File Upload) */
+.formio-component-file {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* DONT KNOW */
+.formio-component-file label {
+  font-family: var(--v-text-button-font-family);
+  font-weight: var(--v-text-button-font-weight);
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+/* File upload drop area (only for file upload component) */
+.formio-component-file .fileSelector {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid #527a21;
+  background-color: #f8ffe9;
+  text-transform: uppercase;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.formio-component-file .fileSelector:hover {
+  background-color: #e1f1a3;
+  border-color: #4a6d1b;
+}
+
+/* Browse link style within the file selector */
+.formio-component-file .fileSelector .browse {
+  font-size: var(--v-text-button-font-size);
+  font-weight: var(--v-text-button-font-weight);
+  color: #527a21;
+  text-decoration: underline;
+}
+
+.formio-component-file .fileSelector .browse:hover {
+  color: #4a6d1b;
+}
+
+/* Loader (only visible during file processing) */
+.formio-component-file .loader-wrapper {
+  display: none;
+}
+
+.formio-component-file .loader-wrapper.active {
+  display: block;
+}
+
+.formio-component-file .loader {
+  width: 30px;
+  height: 30px;
+  border: 4px solid #ddd;
+  border-top: 4px solid #527a21;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* File list area specific to file upload component */
+.formio-component-file .list-group {
+  width: 100%;
+  margin-top: 10px;
+  display:none
+}
+
+.formio-component-file .list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  margin-bottom: 5px;
+  border-radius: 8px;
+}
+
+.formio-component-file .list-group-item .file-name {
+  font-family: var(--v-text-button-font-family);
+  font-weight: var(--v-text-button-font-weight);
+  color: #000;
+  font-size: 14px;
+}
+
+.formio-component-file .list-group-item .file-size {
+  font-family: var(--v-text-button-font-family);
+  font-weight: var(--v-text-button-font-weight);
+  color: #000;
+  font-size: 12px;
+  text-align: right;
+}
+
+/* Error message specific to file upload component */
+.formio-component-file .formio-errors {
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+/* Alert message (e.g., for file upload storage issues) */
+.formio-component-file .alert {
+  background-color: #fff3cd;
+  color: #856404;
+  border-radius: var(--shape-corner-full);
+  padding: 10px;
+  font-family: var(--v-text-button-font-family);
+  font-weight: var(--v-text-button-font-weight);
+  font-size: var(--v-text-button-font-size);
+  margin-top: 10px;
+}
+
+/* Warning text inside the alert box */
+.formio-component-file .alert p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.highlight {
+  background: #d1eaf5;
+  border-radius: var(--corner-extra-small, 4px);
+  border-style: solid;
+  border-color: #bccf96;
+  border-width: 0.5px;
+  padding: 2px 8px 2px 8px;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+  color: #106389;
+}
